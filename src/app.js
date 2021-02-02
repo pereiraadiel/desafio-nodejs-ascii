@@ -12,6 +12,7 @@ const repositories = [];
 
 app.get("/repositories", (request, response) => {
   // TODO
+  response.status(200).json(repositories);
 });
 
 app.post("/repositories", (request, response) => {
@@ -21,7 +22,8 @@ app.post("/repositories", (request, response) => {
     id: uuid(),
     title,
     url,
-    techs
+    techs,
+    likes: 0
   }
   repositories.push(repository);
   response.status(201).json(repository);
