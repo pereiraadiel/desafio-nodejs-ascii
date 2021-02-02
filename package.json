@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git add . && git commit -m",
+    "push": "git push origin "
   },
   "dependencies": {
     "cors": "^2.8.5",
